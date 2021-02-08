@@ -1,0 +1,26 @@
+.form {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  flex-wrap: wrap;
+  &__input {
+    margin-right: 0.5rem;
+    padding: 0.4rem 1rem;
+    border: none;
+    outline: none;
+    margin-bottom: 0.5rem;
+  }
+  &__select {
+    @extend .form__input;
+  }
+  &__btn {
+    background: $primary-color;
+    color: $secondary-color;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+    padding: 0.4rem 1rem;
+    margin-bottom: 0.5rem;
+  }
+}

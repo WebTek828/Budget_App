@@ -1,0 +1,17 @@
+$primary-color: peru;
+$secondary-color: purple;
+$tertiary-color: red;
+$background-color: rgba(128, 128, 128, 0.5);
+$text-color-primary: #130f1f;
+$background-secondary-color: darkseagreen;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+
+html {
+  background: $background-color;
+}

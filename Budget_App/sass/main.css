@@ -1,0 +1,269 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1.4;
+}
+
+html {
+  background: rgba(128, 128, 128, 0.5);
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.upper {
+  min-height: 30vh;
+  padding: 2rem;
+  color: #130f1f;
+  background: darkseagreen;
+}
+
+.available-budget {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.available-budget__heading {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.available-budget__budget {
+  background: purple;
+  padding: 0.4rem 2rem;
+  width: 16rem;
+  text-align: center;
+  color: peru;
+  font-size: 1.4rem;
+}
+
+.inc-exp {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.inc-exp__child {
+  width: 20rem;
+  background: purple;
+  margin: 1rem;
+  padding: 0 1rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.income {
+  background: peru;
+}
+
+.income__text, .expense__text {
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+.expense {
+  background: red;
+  padding-right: 0;
+}
+
+.expense__budget {
+  margin-left: auto;
+  margin-right: 0.8rem;
+}
+
+.expense__percentage, .exp-percentage {
+  background: white;
+  color: red;
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.form__input, .form__select {
+  margin-right: 0.5rem;
+  padding: 0.4rem 1rem;
+  border: none;
+  outline: none;
+  margin-bottom: 0.5rem;
+}
+
+.form__btn {
+  background: peru;
+  color: purple;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 0.4rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.lower {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  height: 70vh;
+  overflow: scroll;
+}
+
+@media (max-width: 1000px) {
+  .lower {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+}
+
+.all-income {
+  background: peru;
+  padding: 1rem;
+}
+
+.all-income__heading, .all-expense__heading {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.all-expense {
+  padding: 1rem;
+  background: red;
+}
+
+.budget-container {
+  margin-top: 0.8rem;
+  padding: 0 1rem;
+  height: 2rem;
+  border: 2px solid black;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.budget-container .budget-money {
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+.budget-container .delete {
+  height: 1.5rem;
+  width: 1.5rem;
+  background: rgba(255, 255, 255, 0.685);
+  position: relative;
+  border-radius: 50%;
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.budget-container .delete:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  cursor: pointer;
+}
+
+.budget-container .delete:active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.budget-container .delete::before {
+  content: "";
+  height: 1px;
+  width: 1rem;
+  background: red;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+}
+
+.delete::after {
+  content: "";
+  height: 1px;
+  width: 1rem;
+  background: red;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.budget-container:hover .delete {
+  width: 1.5rem;
+  opacity: 1;
+  visibility: visible;
+}
+
+.exp-percentage {
+  padding: 0;
+  margin-right: 0.5rem;
+}
+/*# sourceMappingURL=main.css.map */

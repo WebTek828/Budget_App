@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./sass/main.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="header">Created at <span class="date">2/7/2021</span></h1>
+      <div class="upper">
+        <div class="available-budget">
+          <h4 class="available-budget__heading">Available Budget</h4>
+          <div class="available-budget__budget">
+            +<span id="available-budget">0</span>
+          </div>
+        </div>
+        <div class="inc-exp">
+          <div class="income inc-exp__child">
+            <h4 class="income__text">Income</h4>
+            <div class="income__budget" id="total-income">+40000</div>
+          </div>
+          <div class="expense inc-exp__child">
+            <h4 class="expense__text">Expense</h4>
+            <div class="expense__budget" id="total-expense">-20000</div>
+            <span class="expense__percentage">50%</span>
+          </div>
+        </div>
+      </div>
+      <form class="form">
+        <select class="form__select">
+          <option value="Income">+</option>
+          <option value="Expense">-</option>
+        </select>
+        <input
+          placeholder="Reason"
+          class="form__input form__reason"
+          type="text"
+        />
+        <input
+          placeholder="Amount"
+          type="number"
+          class="form__input form__amount"
+        />
+        <button class="form__btn">ADD</button>
+      </form>
+      <div class="lower">
+        <div class="all-income" id="income">
+          <h4 class="all-income__heading">All Income</h4>
+          <div class="incomes"></div>
+        </div>
+        <div class="all-expense" id="expense">
+          <h4 class="all-expense__heading">All Expenses</h4>
+          <div class="expenses"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
